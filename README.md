@@ -447,5 +447,3 @@ Proyek ini disusun dan dikembangkan oleh siswa **Program Keahlian Pengembangan P
   <b>LaborCast & EduLabor © 2026 SMK Telkom Purwokerto</b><br>
   <i>Integrasi Matematika Terapan × Rekayasa Perangkat Lunak dan Gim (PPLG)</i>
 </p>
-# Mtk_proposal
-# Mtk_proposal
