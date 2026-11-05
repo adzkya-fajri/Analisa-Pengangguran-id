@@ -588,3 +588,77 @@ Di mana batas bawah $3,50%$ telah dikalibrasi sesuai lantai alami pengangguran s
 Sistem *LaborCast* dan hasil temuan analisis ini telah disosialisasikan dan dipresentasikan kepada mitra pemangku kepentingan. Nilai guna (*value proposition*) produk ini mencakup:
 + *Bagi Bursa Kerja Khusus (BKK) SMK*: Mengetahui bahwa lulusan baru 2026 akan memasuki pasar kerja nasional dengan tingkat penyerapan yang lebih kondusif (TPT turun ke $4,11%$) namun menghadapi persaingan ketat di perkotaan akibat fenomena *educated unemployment*. BKK diarahkan untuk memperkuat skema sertifikasi industri kompetensi PPLG.
 + *Bagi Dinas Ketenagakerjaan Daerah*: Memberikan formula dekomposisi berbasis model OLS untuk menetapkan target penurunan angka pengangguran terbuka yang realistis di tingkat kabupaten/kota.
+
+// ============================================================
+//  BAB V — PENUTUP
+// ============================================================
+#pagebreak()
+#mulai-bab("V", 5, "PENUTUP")
+
+#subbab("A", "Kesimpulan")
+
+Berdasarkan seluruh rangkaian penelitian, pengolahan data runtun waktu dan spasial BPS, perancangan model matematika regresi, serta evaluasi ekonometrika sistem *LaborCast* dan *EduLabor*, dapat ditarik beberapa kesimpulan mendasar sebagai berikut:
++ *Karakteristik Tren Data Historis*: Data empiris BPS Sakernas periode pemulihan pascapandemi (Agustus 2020--2025) menunjukkan pola penurunan linier negatif yang sangat konsisten, bergerak turun dari $7,07%$ (2020) hingga mencapai $4,85%$ (2025). Terdapat diferensial musiman (*seasonal gap*) yang stabil sebesar $0,09%$ poin, di mana TPT periode Agustus selalu lebih tinggi daripada periode Februari akibat masuknya lulusan baru (*fresh graduates*).
++ *Formulasi Model Matematis OLS*: Hubungan antara waktu kalender ($t$) dan TPT nasional ($Y$) berhasil dimodelkan secara analitik menggunakan Metode Kuadrat Terkecil (*Ordinary Least Squares* / OLS) dengan formulasi resmi:
+  $ hat(Y)_t = 952.28 - 0.4680 dot t $
+  Model ini menunjukkan bahwa setiap pertambahan satu tahun kalender berkontribusi terhadap penurunan rata-rata TPT nasional sebesar *0,468% poin*.
++ *Keandalan dan Kualitas Model*: Model Linear OLS terbukti menjadi model terbaik untuk horizon peramalan satu langkah ke depan (*one-step-ahead forecast*) dengan koefisien determinasi sangat tinggi ($R^2 = 0,9576$), kesalahan rata-rata latih rendah (MAE $= 0,1527%$, RMSE $= 0,1682%$, MAPE $= 2,81%$), serta kesalahan validasi silang LOOCV terendah ($4,67% < 10%$, kategori *highly accurate*). Seluruh uji asumsi klasik Gauss-Markov terpenuhi secara memuaskan (uji normalitas Shapiro-Wilk $p = 0,8508 > 0,05$ dan uji autokorelasi Durbin-Watson $d = 2,104$).
++ *Hasil Proyeksi TPT Target Tahun 2026*: Model *LaborCast* memproyeksikan angka Tingkat Pengangguran Terbuka nasional untuk tahun 2026 sebagai berikut:
+  - Survei Semester II (Agustus 2026): *4,11%*
+  - Survei Semester I (Februari 2026): *4,02%*
+  - Rata-rata Tahunan 2026: *4,065%*
+  - Interval Prediksi pada Tingkat Kepercayaan 95%: *[3,50% s.d. 4,89%]*, di mana batas bawah dilindungi oleh batas lantai pengangguran alamiah (*NAIRU floor* sebesar $3,50%$).
++ *Hubungan Spasial Pendidikan dan Pengangguran*: Uji korelasi linier Pearson pada 38 provinsi di Indonesia tahun 2025 membuktikan adanya korelasi positif yang kuat ($r = +0,6293$, $R^2 = 39,61%$) antara persentase penduduk berpendidikan SMA ke atas dengan angka TPT daerah. Hal ini mengonfirmasi terjadinya fenomena *educated unemployment* di wilayah perkotaan/metropolitan Indonesia.
+
+#subbab("B", "Saran")
+
+Berdasarkan temuan penelitian dan dinamika angka proyeksi yang dihasilkan, diajukan beberapa saran konstruktif:
++ *Bagi Sekolah (SMK Telkom Purwokerto & BKK)*: Mengingat lulusan sekolah menengah kejuruan memasuki bursa kerja pada periode Agustus yang secara reguler mengalami lonjakan pencari kerja baru, Bursa Kerja Khusus (BKK) disarankan untuk mempercepat sertifikasi kompetensi industri berstandar nasional/internasional serta memperluas kemitraan strategis dengan industri perangkat lunak sebelum masa kelulusan tiba.
++ *Bagi Dinas Ketenagakerjaan dan Pengambil Kebijakan*: Pemerintah daerah di provinsi dengan konsentrasi penduduk terdidik tinggi (seperti Jawa Barat, Banten, dan DKI Jakarta) diharapkan tidak hanya berfokus pada penciptaan lapangan kerja padat karya konvensional, melainkan memperbanyak ekosistem industri kreatif digital dan teknologi informasi yang mampu menyerap angkatan kerja terdidik secara produktif.
++ *Bagi Pengembangan Perangkat Lunak Selanjutnya*: Sistem *LaborCast* dapat dikembangkan lebih lanjut dengan menambahkan variabel makroekonomi eksogen tambahan (seperti laju pertumbuhan Produk Domestik Bruto / PDB riil, tingkat inflasi tahunan, dan pertumbuhan investasi modal asing/PMDN) menggunakan pendekatan model Vector Autoregression (VAR) atau Autoregressive Distributed Lag (ARDL).
+
+// ============================================================
+//  DAFTAR PUSTAKA
+// ============================================================
+#pagebreak(weak: true)
+
+#heading(level: 1, numbering: none)[DAFTAR PUSTAKA]
+
+#pustaka([Badan Pusat Statistik. (2020--2025). _Keadaan Ketenagakerjaan Indonesia (Buku Sakernas Februari & Agustus)_. Jakarta: BPS RI.])
+#pustaka([Badan Pusat Statistik. (2025). _Tingkat Pengangguran Terbuka Menurut Provinsi, 2025 (Katalog BPS No. 3101002)_. Jakarta: BPS RI.])
+#pustaka([Badan Pusat Statistik. (2025). _Persentase Penduduk Usia 25 Tahun ke Atas Menurut Tingkat Pendidikan Tertinggi yang Ditamatkan dan Jenis Kelamin, 2018–2025_. Jakarta: BPS RI.])
+#pustaka([Gujarati, D. N., & Porter, D. C. (2009). _Basic Econometrics_ (5th ed.). New York: McGraw-Hill Education.])
+#pustaka([Harris, C. R., Millman, K. J., van der Walt, S. J., et al. (2020). Array programming with NumPy. _Nature_, 585(7825), 357–362.])
+#pustaka([McKinney, W. (2010). Data Structures for Statistical Computing in Python. _Proceedings of the 9th Python in Science Conference_, 56–61.])
+#pustaka([Pedregosa, F., Varoquaux, G., Gramfort, A., et al. (2011). Scikit-learn: Machine Learning in Python. _Journal of Machine Learning Research_, 12, 2825–2830.])
+#pustaka([Pressman, R. S. (2015). _Software Engineering: A Practitioner's Approach_ (8th ed.). New York: McGraw-Hill Education.])
+#pustaka([Spiegel, M. R., & Stephens, L. J. (2018). _Schaum's Outline of Statistics_ (6th ed.). New York: McGraw-Hill Education.])
+#pustaka([Sukamto, R. A., & Shalahuddin, M. (2018). _Rekayasa Perangkat Lunak Terstruktur dan Berorientasi Objek_. Bandung: Informatika.])
+#pustaka([Walpole, R. E., Myers, R. H., Myers, S. L., & Ye, K. (2012). _Probability & Statistics for Engineers & Scientists_ (9th ed.). Boston: Pearson.])
+#pustaka([Wooldridge, J. M. (2016). _Introductory Econometrics: A Modern Approach_ (6th ed.). Boston: Cengage Learning.])
+
+// ============================================================
+//  LAMPIRAN
+// ============================================================
+#pagebreak(weak: true)
+
+#heading(level: 1, numbering: none)[LAMPIRAN]
+
+#v(0.5em)
+
++ *Surat Kesediaan Klien dan Mitra Pengguna Produk*:
+  Telah diverifikasi dan disetujui bersama Bursa Kerja Khusus (BKK) SMK Telkom Purwokerto sebagai instrumen proyeksi pasar kerja siswa kejuruan.
++ *Hasil Observasi dan Telaah Data Ketenagakerjaan*:
+  Ekstraksi berkas tabel agregat BPS Sakernas 2015--2025 dan portal data terbuka BPS RI.
++ *Lembar Validasi dan Logbook Bimbingan*:
+  Pencatatan bimbingan berkala bersama Guru Pembimbing (Farahita Yunandini Arumbifa, S.Pd.) dari tahap pengajuan proposal, pra-proses data, perancangan model, pengujian residu, hingga penyusunan laporan akhir.
++ *Tautan Repositori Kode Sumber dan Artefak Digital*:
+  Seluruh kode sumber Python, pipeline machine learning, notebook Jupyter (01 s.d. 06), dataset CSV, model tersimpan `joblib`, berkas sumber Typst, dan naskah laporan didokumentasikan secara terbuka dan dapat diakses publik melalui tautan resmi:
+  #align(center)[
+    #box(stroke: 0.6pt, inset: 10pt, radius: 4pt)[
+      #strong[Tautan Repositori GitHub Resmi:] \
+      #link("https://github.com/adzkya-fajri/Analisa-Pengangguran-id")
+    ]
+  ]
++ *Dokumentasi Materi Pitching dan Infografis Produk*:
+  Naskah ringkas infografis (*600–800 kata*), berkas poster digital resolusi tinggi (`infografis.pdf`), serta luaran grafik evaluasi model LaborCast yang dipamerkan pada kegiatan Expo PSAJ PPLG SMK Telkom Purwokerto.
