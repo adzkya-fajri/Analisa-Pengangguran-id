@@ -33,10 +33,11 @@
   Disusun oleh:
 
   #v(0.6em)
-  #block(width: 11.5cm)[
+  #block(width: auto)[
     #set text(size: 12pt)
     #grid(
-      columns: (1fr, auto),
+      columns: (auto, auto),
+      column-gutter: 1.5em,
       row-gutter: 0.5em,
       align: (left, left),
       [1. Adzkya Gharizi Fajri Anwar], [(NIS 541241008)],
