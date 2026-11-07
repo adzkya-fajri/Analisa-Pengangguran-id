@@ -12,38 +12,40 @@
 #set page(numbering: none)
 
 #align(center)[
-  #v(0.8cm)
+  #set par(justify: false)
+  #v(1cm)
   #text(weight: "bold", size: 14pt, tracking: 0.5pt)[LAPORAN PROYEK] \
-  #v(0.3em)
-  #text(weight: "bold", size: 13pt)[PENILAIAN SUMATIF AKHIR JENJANG (PSAJ)] \
-  #v(0.3em)
-  #text(weight: "bold", size: 13pt)[TAHUN AJARAN 2026/2027]
+  #v(0.4em)
+  #text(weight: "bold", size: 13pt)[PENILAIAN SUMATIF AKHIR JENJANG (PSAJ)]
 
-  #v(1.5em)
+  #v(1.8em)
 
   #text(weight: "bold", size: 14pt)[
-    SISTEM PERAMALAN TINGKAT PENGANGGURAN TERBUKA INDONESIA
-    TARGET TAHUN 2026 BERBASIS REGRESI LINIER SEDERHANA
+    SISTEM PERAMALAN TINGKAT PENGANGGURAN TERBUKA INDONESIA \
+    TARGET TAHUN 2026 BERBASIS REGRESI LINIER SEDERHANA \
     DAN ANALISIS SPASIO-TEMPORAL PENDIDIKAN
   ]
 
-  #v(1.5em)
+  #v(1.8em)
   #image("assets/telkom-logo.png", width: 3.5cm)
-  #v(1.5em)
+  #v(1.8em)
 
   Disusun oleh:
 
-  #v(0.5em)
-  #align(left)[
-    #pad(left: 3cm)[
-      #set text(size: 12pt)
-      + Adzkya Gharizi Fajri Anwar (NIS 541241008)
-      + Aufa Rakha Aesar Aulayain (NIS 541241028)
-      + Andrean Rayhan Wijaya (NIS 54124018)
-    ]
+  #v(0.6em)
+  #block(width: 11.5cm)[
+    #set text(size: 12pt)
+    #grid(
+      columns: (1fr, auto),
+      row-gutter: 0.5em,
+      align: (left, left),
+      [1. Adzkya Gharizi Fajri Anwar], [(NIS 541241008)],
+      [2. Aufa Rakha Aesar Aulayain], [(NIS 541241028)],
+      [3. Andrean Rayhan Wijaya], [(NIS 54124018)],
+    )
   ]
 
-  #v(1cm)
+  #v(1.2cm)
 
   #text(weight: "bold", tracking: -0.5pt)[PROGRAM KEAHLIAN PENGEMBANGAN PERANGKAT LUNAK DAN GIM] \
   #v(0.3em)
