@@ -180,15 +180,15 @@ Kami menyadari bahwa laporan ini masih memiliki ruang penyempurnaan. Oleh karena
 
 #subbab("A", "Latar Belakang Masalah")
 
-Tingkat Pengangguran Terbuka (TPT) merupakan salah satu indikator makroekonomi paling krusial yang digunakan oleh pemerintah, pelaku industri, dan institusi pendidikan untuk mengukur derajat penyerapan tenaga kerja serta stabilitas perekonomian nasional. Secara berkala, Badan Pusat Statistik (BPS) menerbitkan angka TPT resmi melalui Survei Angkatan Kerja Nasional (Sakernas) dua kali dalam setahun, yakni pada bulan Februari dan Agustus.
+Tingkat Pengangguran Terbuka (TPT) merupakan salah satu indikator makroekonomi paling krusial yang digunakan oleh pemerintah, pelaku industri, dan institusi pendidikan untuk mengukur derajat penyerapan tenaga kerja serta stabilitas perekonomian nasional. Secara berkala, Badan Pusat Statistik (BPS) menerbitkan angka TPT resmi melalui Survei Angkatan Kerja Nasional (Sakernas) dua kali dalam setahun, yakni pada bulan Februari dan Agustus (Badan Pusat Statistik, 2020--2025).
 
-Berdasarkan publikasi empiris BPS periode Agustus pascapandemi COVID-19, tren TPT nasional memperlihatkan lintasan pemulihan yang sangat teratur. Pandemi global pada tahun 2020 menciptakan patahan struktural (_structural break_) tajam yang menekan pasar kerja, sehingga TPT nasional melonjak hingga mencapai puncak 7,07%. Namun demikian, seiring pemulihan aktivitas ekonomi, TPT nasional secara konsisten berkurang dari tahun ke tahun: 6,49% pada 2021, 5,86% pada 2022, 5,32% pada 2023, 4,91% pada 2024, dan berhasil menyentuh angka 4,85% pada Agustus 2025.
+Berdasarkan publikasi empiris BPS periode Agustus pascapandemi COVID-19, tren TPT nasional memperlihatkan lintasan pemulihan yang sangat teratur. Pandemi global pada tahun 2020 menciptakan patahan struktural (_structural break_) tajam yang menekan pasar kerja (Wooldridge, 2016), sehingga TPT nasional melonjak hingga mencapai puncak 7,07%. Namun demikian, seiring pemulihan aktivitas ekonomi, TPT nasional secara konsisten berkurang dari tahun ke tahun: 6,49% pada 2021, 5,86% pada 2022, 5,32% pada 2023, 4,91% pada 2024, dan berhasil menyentuh angka 4,85% pada Agustus 2025.
 
-Pola penurunan yang konsisten dan monoton pascapandemi tersebut mengindikasikan adanya hubungan linear negatif yang kuat antara pergeseran waktu (tahun) dengan penurunan angka pengangguran terbuka. Fenomena keteraturan empiris ini membuka peluang strategis untuk dimodelkan secara matematis menggunakan metode Regresi Linier Sederhana berbasis _Ordinary Least Squares_ (OLS). Melalui metode OLS, hubungan linier antara waktu sebagai variabel bebas ($X$) dan TPT sebagai variabel terikat ($Y$) dapat dirumuskan secara analitik dengan meminimalkan jumlah kuadrat galat (_error sum of squares_).
+Pola penurunan yang konsisten dan monoton pascapandemi tersebut mengindikasikan adanya hubungan linear negatif yang kuat antara pergeseran waktu (tahun) dengan penurunan angka pengangguran terbuka. Fenomena keteraturan empiris ini membuka peluang strategis untuk dimodelkan secara matematis menggunakan metode Regresi Linier Sederhana berbasis _Ordinary Least Squares_ (OLS) (Gujarati & Porter, 2009). Melalui metode OLS, hubungan linier antara waktu sebagai variabel bebas ($X$) dan TPT sebagai variabel terikat ($Y$) dapat dirumuskan secara analitik dengan meminimalkan jumlah kuadrat galat (_error sum of squares_).
 
-Meskipun demikian, pemodelan deret waktu makro semata belum cukup untuk menggambarkan realitas pasar kerja di tingkat daerah. Analisis komparatif 38 provinsi di Indonesia tahun 2025 menunjukkan adanya disparitas yang tajam, di mana angka TPT terendah berada di Provinsi Bali (1,49%) dan tertinggi di Provinsi Papua (6,96%) serta Banten (6,68%). Di samping itu, pengamatan spasial menunjukkan paradoks ketenagakerjaan di mana daerah dengan proporsi lulusan pendidikan menengah atas (SMA/SMK ke atas) yang tinggi justru cenderung mencatat angka pengangguran terbuka yang lebih tinggi akibat dinamika _educated unemployment_ dan ekspektasi upah formal.
+Meskipun demikian, pemodelan deret waktu makro semata belum cukup untuk menggambarkan realitas pasar kerja di tingkat daerah. Analisis komparatif 38 provinsi di Indonesia tahun 2025 menunjukkan adanya disparitas yang tajam, di mana angka TPT terendah berada di Provinsi Bali (1,49%) dan tertinggi di Provinsi Papua (6,96%) serta Banten (6,68%) (Badan Pusat Statistik, 2025a). Di samping itu, pengamatan spasial menunjukkan paradoks ketenagakerjaan di mana daerah dengan proporsi lulusan pendidikan menengah atas (SMA/SMK ke atas) yang tinggi justru cenderung mencatat angka pengangguran terbuka yang lebih tinggi akibat dinamika _educated unemployment_ dan ekspektasi upah formal (Badan Pusat Statistik, 2025b).
 
-Menjawab tantangan tersebut, penelitian ini mengembangkan sistem terintegrasi yang diberi nama _LaborCast_ (mesin peramalan deret waktu berbasis OLS dan _benchmark multi-model_) dan modul _EduLabor_ (analisis spasio-temporal keterkaitan pendidikan dan pengangguran provinsi). Integrasi ini menghubungkan teori matematika kejuruan dengan implementasi rekayasa perangkat lunak modern menggunakan ekosistem Python (`NumPy`, `Pandas`, `Scikit-Learn`, dan `SciPy`). Kode sumber dan artefak sistem ini dikelola secara terbuka dan transparan pada repositori GitHub resmi: #link("https://github.com/adzkya-fajri/Analisa-Pengangguran-id").
+Menjawab tantangan tersebut, penelitian ini mengembangkan sistem terintegrasi yang diberi nama _LaborCast_ (mesin peramalan deret waktu berbasis OLS dan _benchmark multi-model_) dan modul _EduLabor_ (analisis spasio-temporal keterkaitan pendidikan dan pengangguran provinsi). Integrasi ini menghubungkan teori matematika kejuruan dengan implementasi rekayasa perangkat lunak modern menggunakan ekosistem komputasi ilmiah Python melalui pustaka `NumPy` (Harris et al., 2020), `Pandas` (McKinney, 2010), `Scikit-Learn` (Pedregosa et al., 2011), dan `SciPy`. Kode sumber dan artefak sistem ini dikelola secara terbuka dan transparan pada repositori GitHub resmi: #link("https://github.com/adzkya-fajri/Analisa-Pengangguran-id").
 
 #subbab("B", "Rumusan Masalah")
 
@@ -232,7 +232,7 @@ Agar pembahasan penelitian tetap fokus, mendalam, dan terukur, batasan masalah d
 
 #subbab("A", "Tinjauan Objek Penelitian")
 
-Objek utama penelitian ini adalah dinamika makroekonomi ketenagakerjaan di Indonesia, khususnya indikator Tingkat Pengangguran Terbuka (TPT) dan indikator pendidikan penduduk usia 25 tahun ke atas dengan kualifikasi minimal SMA/SMK sederajat. Badan Pusat Statistik (BPS) mendefinisikan TPT sebagai persentase jumlah pengangguran terhadap total angkatan kerja:
+Objek utama penelitian ini adalah dinamika makroekonomi ketenagakerjaan di Indonesia, khususnya indikator Tingkat Pengangguran Terbuka (TPT) dan indikator pendidikan penduduk usia 25 tahun ke atas dengan kualifikasi minimal SMA/SMK sederajat (Badan Pusat Statistik, 2025a, 2025b). Badan Pusat Statistik mendefinisikan TPT sebagai persentase jumlah pengangguran terhadap total angkatan kerja:
 
 $ "TPT" = P / A times 100% $
 
@@ -242,11 +242,11 @@ Survei ketenagakerjaan dilakukan secara berkala dua kali dalam setahun:
 + *Periode Februari*: Mencerminkan pasar kerja awal tahun yang cenderung memiliki angka partisipasi kerja stabil sebelum masuknya lulusan baru lembaga pendidikan formal.
 + *Periode Agustus*: Mencerminkan pasar kerja pertengahan tahun yang secara reguler menyerap limpahan lulusan baru (_fresh graduates_) dari jenjang sekolah menengah (SMA/SMK) maupun perguruan tinggi.
 
-Perbedaan siklus ini menimbulkan kesenjangan musiman (_seasonal gap_) historis yang konsisten, di mana TPT periode Agustus rata-rata berada sekitar 0,09% poin lebih tinggi daripada periode Februari pascapandemi.
+Perbedaan siklus ini menimbulkan kesenjangan musiman (_seasonal gap_) historis yang konsisten, di mana TPT periode Agustus rata-rata berada sekitar 0,09% poin lebih tinggi daripada periode Februari pascapandemi (Badan Pusat Statistik, 2020--2025).
 
 #subbab("B", "Konsep Statistika Deskriptif Berkelompok")
 
-Statistika deskriptif berfungsi untuk mereduksi, meringkas, dan menyajikan sekumpulan data numerik agar karakteristik distribusinya dapat dipahami dengan jelas. Pada data spasial 38 provinsi, analisis dilakukan dengan menyusun tabel distribusi frekuensi berkelompok melalui kaidah empiris Sturges:
+Statistika deskriptif berfungsi untuk mereduksi, meringkas, dan menyajikan sekumpulan data numerik agar karakteristik distribusinya dapat dipahami dengan jelas (Spiegel & Stephens, 2018). Pada data spasial 38 provinsi, analisis dilakukan dengan menyusun tabel distribusi frekuensi berkelompok melalui kaidah empiris Sturges (Spiegel & Stephens, 2018):
 
 $ k = 1 + 3,322 dot log_(10)(n) $
 
@@ -269,7 +269,7 @@ Visualisasi data memegang peranan krusial dalam menyederhanakan interpretasi tre
 
 *1. Analisis Korelasi Pearson ($r$)*
 
-Koefisien korelasi linier _Product Moment_ Pearson mengukur derajat asosiasi dan arah hubungan antara dua variabel kuantitatif kontinu ($X$ dan $Y$), dengan domain nilai $-1 <= r <= +1$:
+Koefisien korelasi linier _Product Moment_ Pearson mengukur derajat asosiasi dan arah hubungan antara dua variabel kuantitatif kontinu ($X$ dan $Y$), dengan domain nilai $-1 <= r <= +1$ (Walpole et al., 2012):
 
 $ r = (n sum X_i Y_i - (sum X_i)(sum Y_i)) / (sqrt(n sum X_i^2 - (sum X_i)^2) dot sqrt(n sum Y_i^2 - (sum Y_i)^2)) $
 
@@ -277,7 +277,7 @@ Korelasi positif ($r > 0$) mengindikasikan bahwa peningkatan variabel $X$ beriri
 
 *2. Estimasi Parameter Regresi Linier Sederhana (OLS)*
 
-Persamaan garis regresi linier dinyatakan secara definitif sebagai:
+Persamaan garis regresi linier dinyatakan secara definitif sebagai (Gujarati & Porter, 2009; Wooldridge, 2016):
 
 $ hat(Y) = a + b X $
 
@@ -289,7 +289,7 @@ $ a = overline(Y) - b overline(X) $
 
 *3. Estimasi Interval Prediksi* (_Prediction Interval_ 95%)
 
-Untuk menghitung ketidakpastian proyeksi nilai individu baru pada horizon masa depan $X_0$, galat baku prediksi (_standard error of prediction_ $s_e$) dirumuskan sebagai:
+Untuk menghitung ketidakpastian proyeksi nilai individu baru pada horizon masa depan $X_0$, galat baku prediksi (_standard error of prediction_ $s_e$) dirumuskan sebagai (Gujarati & Porter, 2009; Walpole et al., 2012):
 
 $ s_"pred" = s_e dot sqrt(1 + 1/n + (X_0 - overline(X))^2 / (sum_(i=1)^n (X_i - overline(X))^2)) $
 
@@ -306,21 +306,21 @@ Dalam implementasi diseminasi hasil peramalan, sistem _LaborCast_ merancang luar
 
 #subbab("F", "Arsitektur Sistem")
 
-Perangkat lunak _LaborCast_ dibangun menggunakan arsitektur modular berorientasi objek yang memisahkan tanggung jawab fungsional secara ketat (_Separation of Concerns_):
-+ `laborcast.data`: Menangani ingesti data CSV, validasi integritas skema, pembersihan nilai kosong, dan normalisasi runtun waktu.
+Perangkat lunak _LaborCast_ dibangun menggunakan arsitektur modular berorientasi objek yang memisahkan tanggung jawab fungsional secara ketat (_Separation of Concerns_) sesuai prinsip rekayasa perangkat lunak modern (Pressman, 2015; Sukamto & Shalahuddin, 2018):
++ `laborcast.data`: Menangani ingesti data CSV, manipulasi _data frame_, validasi integritas skema, pembersihan nilai kosong, dan normalisasi runtun waktu berbasis `pandas` (McKinney, 2010) dan `numpy` (Harris et al., 2020).
 + `laborcast.models`: Berisi kelas abstrak `BaseModel` serta kelas implementasi konkrit (`LinearTrendModel`, `PolynomialTrendModel`, `ExponentialSmoothingModel`, `MovingAverageModel`, dan `NAIRUAsymptoticModel`).
-+ `laborcast.evaluator`: Menghitung metrik performa (MAE, RMSE, MAPE, $R^2$) serta uji asumsi klasik residu ekonometrika.
++ `laborcast.evaluator`: Menghitung metrik performa (MAE, RMSE, MAPE, $R^2$) memanfaatkan pustaka `scikit-learn` (Pedregosa et al., 2011) serta uji asumsi klasik residu ekonometrika.
 + `laborcast.inference`: Mengelola pembentukan prediksi skenario tunggal maupun skenario komparatif berlantai alami.
 + `laborcast.persistence`: Menyediakan mekanisme serialisasi model teruji ke format `joblib` dan metadata `json`.
 + `laborcast.pipeline`: Mengorkestrasi seluruh siklus komputasi dari hulu ke hilir (_end-to-end execution_).
 
 #subbab("G", "Rencana Implementasi AI")
 
-Penerapan kecerdasan buatan (_Artificial Intelligence_) dalam proyek ini berfokus pada pemodelan prediktif berbasis statistika inferensial dan pembelajaran mesin kuantitatif:
+Penerapan kecerdasan buatan (_Artificial Intelligence_) dalam proyek ini berfokus pada pemodelan prediktif berbasis statistika inferensial dan pembelajaran mesin kuantitatif, mengikuti siklus hidup rekayasa perangkat lunak cerdas (Pressman, 2015):
 + *Masalah yang Diselesaikan*: Menyediakan estimasi objektif angka pengangguran masa depan (2026) pascapemulihan COVID-19 guna menggantikan estimasi intuitif non-kuantitatif.
 + *Jenis Model*: Model regresi OLS linier terlatih yang dipadukan dengan kendala batas lantai alami NAIRU (_Non-Accelerating Inflation Rate of Unemployment_) pada ambang 3,50%.
 + *Kebutuhan Data*: Angka runtun waktu TPT resmi BPS (2020--2025) yang bersih dari distorsi anomali pra-pandemi.
-+ *Ukuran Keberhasilan*: Model harus mencapai koefisien determinasi $R^2 >= 0,90$, MAPE validasi silang $< 10%$ (kategori _highly accurate_), dan lolos uji normalitas residu Shapiro-Wilk ($p > 0,05$).
++ *Ukuran Keberhasilan*: Model harus mencapai koefisien determinasi $R^2 >= 0,90$, MAPE validasi silang $< 10%$ (kategori _highly accurate_), dan lolos uji normalitas residu Shapiro-Wilk ($p > 0,05$) (Gujarati & Porter, 2009).
 
 #pagebreak()
 
@@ -336,9 +336,9 @@ Penelitian, eksplorasi data, rekayasa perangkat lunak, serta penyusunan laporan 
 #subbab("B", "Sumber dan Jenis Data")
 
 Data yang dihimpun dan digunakan dalam penelitian ini merupakan *data sekunder kuantitatif* yang diunduh secara resmi dari portal data Badan Pusat Statistik Republik Indonesia (BPS RI):
-+ *Himpunan Data Runtun Waktu TPT Nasional (2015--2025)*: Memuat angka pengangguran terbuka periode Februari, Agustus, dan rata-rata tahunan nasional. Sub-sampel tahun 2020--2025 ($n = 6$) dijadikan basis pelatihan model OLS.
-+ *Himpunan Data Spasial TPT 38 Provinsi (2025)*: Memuat angka pengangguran terbuka menurut 38 provinsi di Indonesia (_Dataset_ $Y$).
-+ *Himpunan Data Pendidikan SMA ke Atas 38 Provinsi (2018--2025)*: Memuat persentase penduduk berumur 25 tahun ke atas dengan ijazah tertinggi minimal SMA/SMK sederajat (_Dataset_ $X$).
++ *Himpunan Data Runtun Waktu TPT Nasional (2015--2025)*: Memuat angka pengangguran terbuka periode Februari, Agustus, dan rata-rata tahunan nasional (Badan Pusat Statistik, 2020--2025). Sub-sampel tahun 2020--2025 ($n = 6$) dijadikan basis pelatihan model OLS.
++ *Himpunan Data Spasial TPT 38 Provinsi (2025)*: Memuat angka pengangguran terbuka menurut 38 provinsi di Indonesia (Badan Pusat Statistik, 2025a) (_Dataset_ $Y$).
++ *Himpunan Data Pendidikan SMA ke Atas 38 Provinsi (2018--2025)*: Memuat persentase penduduk berumur 25 tahun ke atas dengan ijazah tertinggi minimal SMA/SMK sederajat (Badan Pusat Statistik, 2025b) (_Dataset_ $X$).
 
 #subbab("C", "Teknik Pengumpulan Data")
 
@@ -354,7 +354,7 @@ Alur analisis data dan rekayasa model dilakukan melalui tahapan komputasi yang k
 + *Perhitungan Analitik OLS*: Menghitung matriks variansi-kovariansi untuk memperoleh koefisien lereng ($b$) dan konstanta ($a$) secara eksak.
 + *Pengujian Model Benchmark* (_Model Benchmarking_): Membandingkan performa OLS terhadap model Polinomial Kuadratik, Pemulusan Eksponensial Holt, Rata-rata Bergerak, dan Peluruhan NAIRU.
 + *Validasi Silang* (_Leave-One-Out Cross-Validation_ / LOOCV): Menguji kekokohan model melalui skema _Leave-One-Out Cross-Validation_ untuk mencegah gejala _overfitting_ pada sampel berukuran terbatas.
-+ *Uji Asumsi Klasik Residu*: Memverifikasi asumsi kelayakan ekonometrika Gauss-Markov menggunakan uji normalitas Shapiro-Wilk, autokorelasi Durbin-Watson, dan heteroskedastisitas Breusch-Pagan.
++ *Uji Asumsi Klasik Residu*: Memverifikasi asumsi kelayakan ekonometrika Gauss-Markov menggunakan uji normalitas Shapiro-Wilk, autokorelasi Durbin-Watson, dan heteroskedastisitas Breusch-Pagan (Gujarati & Porter, 2009; Wooldridge, 2016).
 + *Inferensi dan Estimasi Proyeksi*: Menghitung nilai titik proyeksi TPT tahun 2026 beserta rentang toleransi _prediction interval_ pada derajat kepercayaan 95%.
 
 #tbl("Spesifikasi Perangkat Keras dan Perangkat Lunak Komputasi",
@@ -367,7 +367,7 @@ Alur analisis data dan rekayasa model dilakukan melalui tahapan komputasi yang k
       strong[Komponen], strong[Spesifikasi / Keterangan]
     ),
     [Bahasa Pemrograman], [Python 3.10+ (64-bit)],
-    [Pustaka Komputasi & ML], [NumPy 1.26+, Pandas 2.2+, Scikit-Learn 1.4+, SciPy 1.12+],
+    [Pustaka Komputasi & ML], [NumPy 1.26+ (Harris et al., 2020), Pandas 2.2+ (McKinney, 2010), Scikit-Learn 1.4+ (Pedregosa et al., 2011), SciPy 1.12+],
     [Visualisasi & Layout], [Matplotlib 3.8+, Seaborn 0.13+, Typst 0.12+],
     [Kontrol Versi & Kode], [Git 2.40+, Repositori GitHub resmi],
     [Lingkungan Eksekusi], [Linux x86_64, Visual Studio Code, Jupyter Notebook],
@@ -426,8 +426,8 @@ Tahap pengolahan data awal (_data preprocessing_) bertujuan untuk membersihkan, 
 )
 
 Dari pengolahan data awal di atas, diperoleh dua temuan empiris mendasar:
-+ *Patahan Struktural* (_Structural Break_): Terjadi lonjakan tajam sebesar $+1,84%$ poin antara Februari 2020 (4,99%) ke Agustus 2020 (7,07%) akibat pembatasan sosial berskala besar selama pandemi. Memasukkan data sebelum tahun 2020 ke dalam satu garis regresi linier tunggal akan membiaskan estimasi kemiringan lereng (_slope_). Oleh karena itu, data latih model peramalan OLS difokuskan pada fase pemulihan homogen pascapandemi ($2020--2025$, $n = 6$).
-+ *Diferensial Musiman* (_Seasonal Gap_): Nilai TPT pada bulan Agustus secara konsisten lebih tinggi dibandingkan bulan Februari, dengan selisih rata-rata pascapandemi sebesar 0,09% poin. Hal ini disebabkan oleh siklus kelulusan serentak (*fresh graduates*) dari jenjang sekolah menengah (SMA/SMK) dan perguruan tinggi yang membanjiri angkatan kerja pada pertengahan tahun.
++ *Patahan Struktural* (_Structural Break_): Terjadi lonjakan tajam sebesar $+1,84%$ poin antara Februari 2020 (4,99%) ke Agustus 2020 (7,07%) akibat pembatasan sosial berskala besar selama pandemi. Dalam ekonometrika deret waktu, fenomena pergeseran rezim ini dikaji sebagai patahan struktural (Wooldridge, 2016). Memasukkan data sebelum tahun 2020 ke dalam satu garis regresi linier tunggal akan membiaskan estimasi kemiringan lereng (_slope_). Oleh karena itu, data latih model peramalan OLS difokuskan pada fase pemulihan homogen pascapandemi ($2020--2025$, $n = 6$).
++ *Diferensial Musiman* (_Seasonal Gap_): Nilai TPT pada bulan Agustus secara konsisten lebih tinggi dibandingkan bulan Februari, dengan selisih rata-rata pascapandemi sebesar 0,09% poin (Badan Pusat Statistik, 2020--2025). Hal ini disebabkan oleh siklus kelulusan serentak (*fresh graduates*) dari jenjang sekolah menengah (SMA/SMK) dan perguruan tinggi yang membanjiri angkatan kerja pada pertengahan tahun.
 
 #subbab("B", "Tabel Distribusi Frekuensi & Ukuran Pemusatan Data")
 
@@ -435,7 +435,7 @@ Untuk menganalisis variasi spasial di tingkat wilayah, dilakukan pengolahan terh
 
 $ R = X_"max" - X_"min" = 6.96% - 1.49% = 5.47% $
 
-Berdasarkan kaidah empiris Sturges, jumlah kelas interval ditentukan dengan:
+Berdasarkan kaidah empiris Sturges (Spiegel & Stephens, 2018), jumlah kelas interval ditentukan dengan:
 
 $ k = 1 + 3.322 dot log_(10)(38) = 1 + 3.322(1.5798) approx 6.25 arrow.r 6 " kelas" $
 
@@ -485,7 +485,7 @@ Histogram pada gambar di atas menunjukkan bentuk distribusi yang _bimodal_ (memi
 
 #subbab("D", "Uji Korelasi Variabel")
 
-Untuk menguji hipotesis mengenai faktor yang memengaruhi disparitas TPT provinsi, dilakukan analisis korelasi linier Pearson antara variabel bebas ($X$: Persentase penduduk umur 25 tahun ke atas berpendidikan SMA ke atas) dan variabel terikat ($Y$: TPT provinsi tahun 2025) pada 38 provinsi.
+Untuk menguji hipotesis mengenai faktor yang memengaruhi disparitas TPT provinsi, dilakukan analisis korelasi linier Pearson (Walpole et al., 2012) antara variabel bebas ($X$: Persentase penduduk umur 25 tahun ke atas berpendidikan SMA ke atas) dan variabel terikat ($Y$: TPT provinsi tahun 2025) pada 38 provinsi.
 
 #tbl("Ringkasan Statistik Uji Korelasi Pearson Spasial Pendidikan terhadap TPT (2025)",
   table(
@@ -512,7 +512,7 @@ Nilai korelasi positif $r = +0,6293$ ($p < 0,001$) menegaskan fenomena empiris k
 
 *1. Perhitungan Analitik Parameter OLS Nasional*
 
-Menggunakan data latih pemulihan pascapandemi 2020--2025 ($n = 6$), dengan variabel waktu relatif $X_i = t_i - 2020$ ($X = [0, 1, 2, 3, 4, 5]$) dan target TPT Agustus $Y_i = [7,07; 6,49; 5,86; 5,32; 4,91; 4,85]$:
+Mengikuti formulasi kuadrat terkecil standar (Gujarati & Porter, 2009; Wooldridge, 2016), estimasi parameter model OLS dilakukan menggunakan data latih pemulihan pascapandemi 2020--2025 ($n = 6$), dengan variabel waktu relatif $X_i = t_i - 2020$ ($X = [0, 1, 2, 3, 4, 5]$) dan target TPT Agustus $Y_i = [7,07; 6,49; 5,86; 5,32; 4,91; 4,85]$:
 
 $ sum X_i = 15, quad sum Y_i = 34.50, quad sum X_i Y_i = 78.06, quad sum X_i^2 = 55 $
 
@@ -559,9 +559,10 @@ Meskipun model Polinomial Kuadratik menghasilkan $R^2$ latih lebih tinggi (0,982
 
 *3. Uji Asumsi Klasik Residu (Gauss-Markov)*
 
+Untuk memastikan bahwa penaksir OLS memenuhi sifat _Best Linear Unbiased Estimator_ (BLUE) sebagaimana dirumuskan dalam teorema Gauss-Markov (Gujarati & Porter, 2009; Wooldridge, 2016), dilakukan tiga pengujian diagnostik residu:
 + *Uji Normalitas Shapiro-Wilk*: Diperoleh nilai statistik $W = 0,9642$ dengan $p$-value $= 0,8508 > 0,05$. Residu terbukti berdistribusi normal identik.
-+ *Uji Autokorelasi Durbin-Watson*: Diperoleh nilai $d = 2,104$ (mendekati 2,0), membuktikan tidak terdapat autokorelasi serial linier pada residual model.
-+ *Uji Homoskedastisitas Breusch-Pagan*: Nilai signifikansi $p > 0,05$ membuktikan bahwa variansi residu bersifat konstan (homoskedastis).
++ *Uji Autokorelasi Durbin-Watson*: Diperoleh nilai $d = 2,104$ (mendekati 2,0), membuktikan tidak terdapat autokorelasi serial linier pada residual model (Gujarati & Porter, 2009).
++ *Uji Homoskedastisitas Breusch-Pagan*: Nilai signifikansi $p > 0,05$ membuktikan bahwa variansi residu bersifat konstan (homoskedastis) (Wooldridge, 2016).
 
 *4. Hasil Inferensi Proyeksi TPT Target Tahun 2026*
 
@@ -625,8 +626,8 @@ Berdasarkan temuan penelitian dan dinamika angka proyeksi yang dihasilkan, diaju
 #heading(level: 1, numbering: none)[DAFTAR PUSTAKA]
 
 #pustaka([Badan Pusat Statistik. (2020--2025). _Keadaan Ketenagakerjaan Indonesia (Buku Sakernas Februari & Agustus)_. Jakarta: BPS RI.])
-#pustaka([Badan Pusat Statistik. (2025). _Tingkat Pengangguran Terbuka Menurut Provinsi, 2025 (Katalog BPS No. 3101002)_. Jakarta: BPS RI.])
-#pustaka([Badan Pusat Statistik. (2025). _Persentase Penduduk Usia 25 Tahun ke Atas Menurut Tingkat Pendidikan Tertinggi yang Ditamatkan dan Jenis Kelamin, 2018–2025_. Jakarta: BPS RI.])
+#pustaka([Badan Pusat Statistik. (2025a). _Tingkat Pengangguran Terbuka Menurut Provinsi, 2025 (Katalog BPS No. 3101002)_. Jakarta: BPS RI.])
+#pustaka([Badan Pusat Statistik. (2025b). _Persentase Penduduk Usia 25 Tahun ke Atas Menurut Tingkat Pendidikan Tertinggi yang Ditamatkan dan Jenis Kelamin, 2018–2025_. Jakarta: BPS RI.])
 #pustaka([Gujarati, D. N., & Porter, D. C. (2009). _Basic Econometrics_ (5th ed.). New York: McGraw-Hill Education.])
 #pustaka([Harris, C. R., Millman, K. J., van der Walt, S. J., et al. (2020). Array programming with NumPy. _Nature_, 585(7825), 357–362.])
 #pustaka([McKinney, W. (2010). Data Structures for Statistical Computing in Python. _Proceedings of the 9th Python in Science Conference_, 56–61.])
