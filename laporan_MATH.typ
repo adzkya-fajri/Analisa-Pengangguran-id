@@ -37,7 +37,7 @@
     #set text(size: 12pt)
     #grid(
       columns: (auto, auto),
-      column-gutter: 1.5em,
+      column-gutter: 0.7em,
       row-gutter: 0.5em,
       align: (left, left),
       [1. Adzkya Gharizi Fajri Anwar], [(NIS 541241008)],
