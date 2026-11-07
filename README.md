@@ -423,7 +423,7 @@ Proyek ini disusun dan dikembangkan oleh siswa **Program Keahlian Pengembangan P
 | :---: | :--- | :---: | :--- |
 | 1 | **Adzkya Gharizi Fajri Anwar** | 541241008 | *Data Engineer & Visualizer* (Kurasi data BPS 2015–2025, visualisasi Matplotlib, & infografis) |
 | 2 | **Aufa Rakha Aesar Aulayain** | 541241028 | *Machine Learning Engineer* (Formulasi matematis OLS, paket `laborcast`, pipeline inferensi, & pytest) |
-| 3 | **Andrean Rayhan Wijaya** | 54124018 | *Lead Technical Writer* (Penyusunan naskah proposal & laporan akademik Typst, serta dokumentasi) |
+| 3 | **Andrean Rayhan Wijaya** | 541241018 | *Lead Technical Writer* (Penyusunan naskah proposal & laporan akademik Typst, serta dokumentasi) |
 
 * **Pembimbing:** Tim Guru Pembimbing Penilaian Sumatif Akhir Jenjang (PSAJ) Matematika  
 * **Program Keahlian:** Pengembangan Perangkat Lunak dan Gim (PPLG)  

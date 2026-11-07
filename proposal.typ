@@ -35,7 +35,7 @@
       #set text(size: 12pt)
       + Adzkya Gharizi Fajri Anwar (NIS 541241008)
       + Aufa Rakha Aesar Aulayain (NIS 541241028)
-      + Andrean Rayhan Wijaya (NIS 54124018)
+      + Andrean Rayhan Wijaya (NIS 541241018)
     ]
   ]
 
@@ -82,7 +82,7 @@ yang disusun oleh:
   #nomor(
     [Adzkya Gharizi Fajri Anwar (NIS 541241008)],
     [Aufa Rakha Aesar Aulayain (NIS 541241028)],
-    [Andrean Rayhan Wijaya (NIS 54124018)],
+    [Andrean Rayhan Wijaya (NIS 541241018)],
   )
 ]
 
