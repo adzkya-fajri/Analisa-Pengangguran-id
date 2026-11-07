@@ -70,64 +70,7 @@
 )
 #counter(page).update(2)
 
-// ─── ii: LEMBAR PENGESAHAN ───────────────────────────────────
-= LEMBAR PENGESAHAN
-
-Laporan Proyek Penilaian Sumatif Akhir Jenjang (PSAJ) dengan judul:
-
-#align(center)[
-  #text(weight: "bold")[
-    "SISTEM PERAMALAN TINGKAT PENGANGGURAN TERBUKA INDONESIA
-    TARGET TAHUN 2026 BERBASIS REGRESI LINIER SEDERHANA
-    DAN ANALISIS SPASIO-TEMPORAL PENDIDIKAN"
-  ]
-]
-
-#v(0.5em)
-yang disusun oleh:
-#pad(left: 1cm)[
-  #nomor(
-    [Adzkya Gharizi Fajri Anwar (NIS 541241008)],
-    [Aufa Rakha Aesar Aulayain (NIS 541241028)],
-    [Andrean Rayhan Wijaya (NIS 541241018)],
-  )
-]
-
-Program Keahlian Pengembangan Perangkat Lunak dan Gim (PPLG) SMK Telkom Purwokerto, telah diperiksa, diuji, dan disahkan pada:
-
-#v(0.5em)
-Hari / Tanggal #h(0.5em) : #h(0.5em) Kamis, 5 November 2026
-
-#v(1em)
-
-#let ttd-box(label, nama: "", nip: "") = {
-  rect(width: 100%, height: 4.8cm, stroke: 0.6pt)[
-    #set text(font: ("Liberation Serif", "DejaVu Serif"), size: 11pt)
-    #set align(center)
-    #pad(top: 8pt)[#text(weight: "bold")[#label]]
-    #v(1fr)
-    #pad(bottom: 8pt)[
-      #if nama == "" {
-        box(width: 5.5cm)[#repeat[.]]
-      } else {
-        underline[#strong[#nama]]
-      }
-      #if nip != "" [ \ #text(size: 10pt)[NIP/NIK. #nip] ]
-    ]
-  ]
-}
-
-#grid(
-  columns: (1fr, 1fr),
-  column-gutter: 0.5cm,
-  row-gutter: 0.5cm,
-  ttd-box([Guru Pembimbing], nama: "Farahita Yunandini Arumbifa, S.Pd."),
-  ttd-box([Kepala SMK Telkom Purwokerto], nama: "Aris Puji Santoso, S.Kom., M.M."),
-)
-
-#pagebreak()
-
-// ─── iii: KATA PENGANTAR ─────────────────────────────────────
+// ─── ii: KATA PENGANTAR ─────────────────────────────────────
 = KATA PENGANTAR
 
 Puji dan syukur kami panjatkan ke hadirat Tuhan Yang Maha Esa atas limpahan rahmat, taufik, serta hidayah-Nya, sehingga kami dapat menyelesaikan penyusunan dokumen *Laporan Proyek Penilaian Sumatif Akhir Jenjang (PSAJ)* dengan judul *"Sistem Peramalan Tingkat Pengangguran Terbuka Indonesia Target Tahun 2026 Berbasis Regresi Linier Sederhana dan Analisis Spasio-Temporal Pendidikan"*.
