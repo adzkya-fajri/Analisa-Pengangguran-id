@@ -20,12 +20,19 @@
 // ─── FUNGSI UTAMA: #show: psaj-doc ──────────────────────────
 #let psaj-doc(body) = {
   set document(title: "Laporan PSAJ", author: "SMK Telkom Purwokerto")
-  set text(font: ("TeX Gyre Termes", "Liberation Serif"), size: 12pt, lang: "id")
-  set par(justify: true, leading: 0.9em)
+  set text(font: ("Liberation Serif", "DejaVu Serif"), size: 12pt, lang: "id")
+  set par(justify: true, leading: 0.9em, first-line-indent: 1.27cm)
   set page(
     paper: "a4",
     margin: (left: 4cm, right: 3cm, top: 3cm, bottom: 3cm),
   )
+
+  // Reset first-line-indent agar tidak mempengaruhi elemen non-paragraf teks
+  show heading: set par(first-line-indent: 0pt)
+  show table: set par(first-line-indent: 0pt)
+  show enum: set par(first-line-indent: 0pt)
+  show list: set par(first-line-indent: 0pt)
+  show figure: set par(first-line-indent: 0pt)
 
   // Heading level 1 = judul BAB (tengah, bold, 14pt)
   show heading.where(level: 1): it => {
@@ -67,7 +74,7 @@
 // ─── Garis titik-titik / Teks Menjorok Fleksibel ────────
 #let isian(teks: [], pakai-titik: false, menjorok: 0cm, baris: 1) = {
   // Pengaturan font khusus area ini
-  set text(font: ("Times New Roman", "TeX Gyre Termes"), size: 12pt)
+  set text(font: ("Liberation Serif", "DejaVu Serif"), size: 12pt)
   set par(leading: 0.9em)
   
   // Bungkus semua dengan 'pad' untuk mengatur jarak menjorok
@@ -161,11 +168,11 @@
 // Daftar Pustaka
 // ─── Format Daftar Pustaka (Hanging Indent) ────────
 #let pustaka(teks) = {
-  // Pengaturan font 12pt Times New Roman
-  set text(font: ("Times New Roman", "TeX Gyre Termes", "Liberation Serif"), size: 12pt)
+  // Pengaturan font 12pt Liberation Serif (setara Times New Roman)
+  set text(font: ("Liberation Serif", "DejaVu Serif"), size: 12pt)
   
-  // Mengatur baris kedua dan seterusnya menjorok ke dalam sebesar 1.27cm
-  set par(justify: true, leading: 0.9em, hanging-indent: 1.27cm)
+  // Mengatur baris kedua dan seterusnya menjorok ke dalam sebesar 1.27cm, baris pertama tetap 0pt
+  set par(justify: true, leading: 0.9em, first-line-indent: 0pt, hanging-indent: 1.27cm)
   
   block(width: 100%, teks)
   v(0.5em) // Jarak antar daftar pustaka
